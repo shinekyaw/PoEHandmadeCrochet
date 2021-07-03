@@ -1,4 +1,4 @@
-package com.example.poehandmadecrochet
+package com.poe.handmade
 
 import io.flutter.embedding.android.FlutterActivity
 
