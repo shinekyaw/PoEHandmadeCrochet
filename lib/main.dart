@@ -45,12 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
   void _launchSocial(String url, String fallbackUrl) async {
     try {
       bool launched =
-          await launch(url, forceSafariVC: false, forceWebView: false);
+          await launch(url, forceSafariVC: false);
+          print("Success");
       if (!launched) {
-        await launch(fallbackUrl, forceSafariVC: false, forceWebView: false);
+        await launch(fallbackUrl, forceSafariVC: false);
       }
     } catch (e) {
-      await launch(fallbackUrl, forceSafariVC: false, forceWebView: false);
+      await launch(fallbackUrl, forceSafariVC: false);
     }
   }
 
@@ -126,7 +127,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       FloatingActionButton(
                           child: Icon(MdiIcons.facebook),
                           onPressed: () => _launchSocial(
-                              'https://www.facebook.com/PoEHandmadeCrochet',
+                              'fb://page/105344938459663',
                               'https://www.facebook.com/PoEHandmadeCrochet')),
                       FloatingActionButton(
                           child: Icon(MdiIcons.facebookMessenger),
